@@ -1,0 +1,23 @@
+server:
+  port: 7900
+  servlet:
+    context-path: /api
+spring:
+  application:
+    name: z_music_server
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/z_music_1?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+    username: zm
+    password: 6GMwGoh+Nds=
+#  profiles:
+#    active: dev
+  mvc:
+    format:
+      date: yyyy-MM-dd HH:mm:ss
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+mybatis-plus:
+    mapper-locations: classpath:com/z/com.z.mapper/*Mapper.xml
+    type-aliases-package: com.z.entity
